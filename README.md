@@ -1,4 +1,4 @@
-# What is DevOps and where is it applied?
+# DevOps o'zi nima va u qayerlarda ishlatiladi?
 
 ![DevOps](Devops1.jpeg)
 
