@@ -1,2 +1,2 @@
-# School21DevOPS
-DevOPS ветке все проекты 
+# DevOPS
+DevOPS все проекты 
