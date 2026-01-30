@@ -1,6 +1,6 @@
 # DevOps o'zi nima va u qayerlarda ishlatiladi?
 
-![DevOps](Devops1.jpeg)
+![DevOps](/imagesMarkdown/Devops1.jpeg)
 
 ## DevOps modelining ta’rifi
 
