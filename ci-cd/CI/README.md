@@ -1,99 +1,102 @@
 # 🔄 Continuous Integration (CI)
+![CI Pipeline](/ci-cd/materials/CICDpipelineillustration.webp)
 
-## 📋 Содержание
-- [Что такое CI?](#что-такое-ci)
-- [Основные задачи CI](#основные-задачи-ci)
-- [Инструменты для CI](#инструменты-для-ci)
-- [Настройка GitHub Actions](#настройка-github-actions)
-- [Настройка GitLab CI](#настройка-gitlab-ci)
-- [Примеры конфигураций](#примеры-конфигураций)
-- [Лучшие практики](#лучшие-практики)
-
----
-
-## 🎯 Что такое CI?
-
-**Continuous Integration (Непрерывная интеграция)** — это практика разработки, при которой разработчики регулярно интегрируют свой код в общий репозиторий. Каждая интеграция автоматически проверяется с помощью автоматизированных сборок и тестов.
-
-### ✅ Основные преимущества:
-- Раннее обнаружение ошибок
-- Улучшение качества кода
-- Ускорение разработки
-- Снижение рисков при интеграции
-- Автоматизация рутинных задач
+## 📋 Mundarija
+- [CI nima?](#ci-nima)
+- [CI ning asosiy vazifalari](#ci-ning-asosiy-vazifalari)
+- [CI uchun vositalar](#ci-uchun-vositalar)
+- [GitHub Actions sozlash](#github-actions-sozlash)
+- [GitLab CI sozlash](#gitlab-ci-sozlash)
+- [Konfiguratsiya misollari](#konfiguratsiya-misollari)
+- [Eng yaxshi amaliyotlar](#eng-yaxshi-amaliyotlar)
 
 ---
 
-## 🎪 Основные задачи CI
+## 🎯 CI nima?
+
+**Continuous Integration (Uzluksiz integratsiya)** — bu ishlab chiqish amaliyoti bo‘lib, unda dasturchilar o‘z kodlarini muntazam ravishda umumiy repozitoriyga integratsiya qiladilar. Har bir integratsiya avtomatlashtirilgan yig‘ish va testlar yordamida avtomatik ravishda tekshiriladi.
+
+### ✅ Asosiy afzalliklari:
+- Xatolarni erta aniqlash
+- Kod sifatini yaxshilash
+- Ishlab chiqishni tezlashtirish
+- Integratsiya jarayonidagi xavflarni kamaytirish
+- Rutin vazifalarni avtomatlashtirish
+
+---
+
+## 🎪 CI ning asosiy vazifalari
 
 ```mermaid
 graph LR
-    A[Git Push] --> B[Сборка проекта]
-    B --> C[Запуск тестов]
-    C --> D[Проверка качества кода]
-    D --> E[Создание артефактов]
-    E --> F[Отчёты и уведомления]
+    A[Git Push] --> B[Loyihani yig‘ish]
+    B --> C[Testlarni ishga tushirish]
+    C --> D[Kod sifatini tekshirish]
+    D --> E[Artefaktlarni yaratish]
+    E --> F[Hisobotlar va bildirishnomalar]
 ```
 
-### 1️⃣ **Сборка проекта (Build)**
-- Компиляция исходного кода
-- Установка зависимостей
-- Генерация конфигурационных файлов
+### 1️⃣ **Loyihani yig‘ish (Build)**
+- Boshlang‘ich kodni kompilyatsiya qilish
+- Bog‘liqliklarni o‘rnatish
+- Konfiguratsiya fayllarini generatsiya qilish
 
-### 2️⃣ **Тестирование (Testing)**
-- Unit-тесты
-- Integration-тесты
-- E2E-тесты
-- Тесты безопасности
+### 2️⃣ **Testlash (Testing)**
+- Unit-testlar
+- Integratsion testlar
+- E2E testlar
+- Xavfsizlik testlari
 
-### 3️⃣ **Проверка качества кода (Code Quality)**
-- Статический анализ кода (Linting)
-- Проверка стиля кода
-- Анализ покрытия тестами
-- Поиск уязвимостей
+### 3️⃣ **Kod sifatini tekshirish (Code Quality)**
+- Kodni statik tahlil qilish (Linting)
+- Kod uslubini tekshirish
+- Testlar bilan qamrovni tahlil qilish
+- Zaifliklarni aniqlash
 
-### 4️⃣ **Создание артефактов (Artifacts)**
-- Docker-образы
-- Исполняемые файлы
-- Архивы с приложением
-- Документация
+### 4️⃣ **Artefaktlarni yaratish (Artifacts)**
+- Docker-imijlar
+- Ijro etiladigan fayllar
+- Ilova bilan arxivlar
 
 ---
 
-## 🛠 Инструменты для CI
+## 🛠 CI uchun vositalar
 
-### 🌟 Популярные CI-платформы
+### 🌟 Mashhur CI platformalari
 
-| Инструмент | Описание | Особенности |
-|------------|----------|-------------|
-| **GitHub Actions** | Встроенная CI/CD платформа GitHub | ✅ Бесплатно для публичных репозиториев<br>✅ Интеграция с GitHub<br>✅ Большой маркетплейс действий |
-| **GitLab CI/CD** | Встроенная CI/CD платформа GitLab | ✅ Гибкая конфигурация<br>✅ Auto DevOps<br>✅ Kubernetes интеграция |
-| **Jenkins** | Самый популярный open-source CI сервер | ✅ Множество плагинов<br>✅ Гибкость настройки<br>⚠️ Требует настройки |
-| **CircleCI** | Cloud-based CI/CD платформа | ✅ Быстрая настройка<br>✅ Docker support<br>💰 Платные планы |
-| **Travis CI** | Cloud CI сервис | ✅ Простая настройка<br>✅ GitHub интеграция<br>💰 Платная модель |
+<p align="center">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/githubactions/githubactions-original.svg" width="100" alt="GitHub Actions Logo"/>  
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/circleci/circleci-original.svg" width="100" alt="CircleCI Logo"/>  
+  <img src="https://raw.githubusercontent.com/travis-ci/artwork/master/logo.png" width="100" alt="Travis CI Logo"/>  
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/gitlab/gitlab-original.svg" width="100" alt="GitLab CI Logo"/>  
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/jenkins-original.svg" width="100" alt="Jenkins Logo"/>
+</p>
 
-### 🔧 Дополнительные инструменты
 
-**Для тестирования:**
+
+### 🔧 Qo‘shimcha vositalar
+
+**Testlash uchun:**
 - Jest, Mocha, Pytest
 - Selenium, Cypress
 - JUnit, TestNG
 
-**Для проверки кода:**
+**Kod tekshiruvi uchun:**
 - ESLint, Pylint, RuboCop
 - SonarQube
 - CodeClimate
 
-**Для сборки:**
+**Yig‘ish (build) uchun:**
 - Maven, Gradle
 - npm, yarn, pip
 - Docker
 
 ---
 
-## ⚙️ Настройка GitHub Actions
+## ⚙️ GitHub Actions sozlash
 
-### 📁 Структура проекта
+### 📁 Loyiha tuzilmasi
+
 
 ```
 your-project/
