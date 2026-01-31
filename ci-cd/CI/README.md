@@ -64,13 +64,51 @@ graph LR
 
 ### 🌟 Mashhur CI platformalari
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/githubactions/githubactions-original.svg" width="100" alt="GitHub Actions Logo"/>  
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/circleci/circleci-original.svg" width="100" alt="CircleCI Logo"/>  
-  <img src="https://raw.githubusercontent.com/travis-ci/artwork/master/logo.png" width="100" alt="Travis CI Logo"/>  
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/gitlab/gitlab-original.svg" width="100" alt="GitLab CI Logo"/>  
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/jenkins-original.svg" width="100" alt="Jenkins Logo"/>
-</p>
+<div align="center">
+
+  <figure style="display:inline-block; margin:20px; text-align:center;">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/githubactions.svg" width="80" alt="GitHub Actions Logo">
+    <figcaption style="margin-top:8px; font-size:14px;">
+      <strong>GitHub Actions</strong><br>
+      CI/CD платформа GitHub
+    </figcaption>
+  </figure>
+
+  <figure style="display:inline-block; margin:20px; text-align:center;">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/gitlab.svg" width="80" alt="GitLab CI Logo">
+    <figcaption style="margin-top:8px; font-size:14px;">
+      <strong>GitLab CI/CD</strong><br>
+      Встроенный CI/CD GitLab
+    </figcaption>
+  </figure>
+
+  <figure style="display:inline-block; margin:20px; text-align:center;">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/jenkins.svg" width="80" alt="Jenkins Logo">
+    <figcaption style="margin-top:8px; font-size:14px;">
+      <strong>Jenkins</strong><br>
+      Open-source CI сервер
+    </figcaption>
+  </figure>
+
+  <figure style="display:inline-block; margin:20px; text-align:center;">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/circleci.svg" width="80" alt="CircleCI Logo">
+    <figcaption style="margin-top:8px; font-size:14px;">
+      <strong>CircleCI</strong><br>
+      Cloud CI/CD платформа
+    </figcaption>
+  </figure>
+
+  <figure style="display:inline-block; margin:20px; text-align:center;">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/travisci.svg" width="80" alt="Travis CI Logo">
+    <figcaption style="margin-top:8px; font-size:14px;">
+      <strong>Travis CI</strong><br>
+      Облачный CI сервис
+    </figcaption>
+  </figure>
+
+</div>
+
+
 
 
 
